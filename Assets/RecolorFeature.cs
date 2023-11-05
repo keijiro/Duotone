@@ -2,38 +2,41 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-class RecolorPass : ScriptableRenderPass
+namespace RecolorURP {
+
+sealed class RecolorPass : ScriptableRenderPass
 {
-    Material _material;
+    public Material material;
 
     public override void Execute
       (ScriptableRenderContext context, ref RenderingData data)
     {
-        if (_material == null) return;
-        var cmd = data.commandBuffer;
-        Blit(cmd, ref data, _material, 0);
-    }
+        if (material == null) return;
 
-    public void Dispose()
-    {
+        var camera = data.cameraData.camera;
+        if (camera.GetComponent<RecolorController>() == null) return;
+
+        var cmd = CommandBufferPool.Get("Recolor");
+        Blit(cmd, ref data, material, 0);
+        context.ExecuteCommandBuffer(cmd);
+        CommandBufferPool.Release(cmd);
     }
 }
 
-public partial class RecolorFeature : ScriptableRendererFeature
+public sealed class RecolorFeature : ScriptableRendererFeature
 {
+    [HideInInspector, SerializeField] Material material = null;
+
     RecolorPass _pass;
 
     public override void Create()
-      => _pass = new RecolorPass();
-
-    protected override void Dispose(bool disposing)
-      => _pass.Dispose();
+      => _pass = new RecolorPass
+           { material = material,
+             renderPassEvent = RenderPassEvent.AfterRendering };
 
     public override void AddRenderPasses
-          (ScriptableRenderer renderer, ref RenderingData data)
-    {
-        _pass.renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
-        _pass.SetupMembers(_material, 0, true, false);
-        renderer.EnqueuePass(_pass);
-    }
+      (ScriptableRenderer renderer, ref RenderingData data)
+      => renderer.EnqueuePass(_pass);
 }
+
+} // namespace RecolorURP
