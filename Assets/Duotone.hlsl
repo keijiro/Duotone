@@ -11,7 +11,6 @@ void DuotoneMain_float
   (float3 C0, float3 C1, float3 C2, float3 C3,
    float4 EdgeColor, float2 EdgeThreshold, float FillOpacity,
    float4 ColorKey0, float4 ColorKey1, float4 ColorKey2, float4 ColorKey3,
-   float4 ColorKey4, float4 ColorKey5, float4 ColorKey6, float4 ColorKey7,
    out float3 Output)
 {
     // Roberts cross operator
@@ -22,13 +21,9 @@ void DuotoneMain_float
     float3 fill = ColorKey0.rgb;
     float lum = Luminance(C0.rrr);
 
-    fill = lerp(fill, ColorKey1.rgb, saturate((lum - ColorKey0.w) / (ColorKey1.w - ColorKey0.w)));
-    fill = lerp(fill, ColorKey2.rgb, saturate((lum - ColorKey1.w) / (ColorKey2.w - ColorKey1.w)));
-    fill = lerp(fill, ColorKey3.rgb, saturate((lum - ColorKey2.w) / (ColorKey3.w - ColorKey2.w)));
-    fill = lerp(fill, ColorKey4.rgb, saturate((lum - ColorKey3.w) / (ColorKey4.w - ColorKey3.w)));
-    fill = lerp(fill, ColorKey5.rgb, saturate((lum - ColorKey4.w) / (ColorKey5.w - ColorKey4.w)));
-    fill = lerp(fill, ColorKey6.rgb, saturate((lum - ColorKey5.w) / (ColorKey6.w - ColorKey5.w)));
-    fill = lerp(fill, ColorKey7.rgb, saturate((lum - ColorKey6.w) / (ColorKey7.w - ColorKey6.w)));
+    fill = lum > ColorKey0.w ? ColorKey1.rgb : fill;
+    fill = lum > ColorKey1.w ? ColorKey2.rgb : fill;
+    fill = lum > ColorKey2.w ? ColorKey3.rgb : fill;
 
     float edge = smoothstep(EdgeThreshold.x, EdgeThreshold.y, g);
     float3 cb = lerp(C0, fill, FillOpacity);
