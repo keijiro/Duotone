@@ -454,10 +454,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -950.5,
-            "y": 427.0,
+            "x": -656.5,
+            "y": 359.0,
             "width": 206.0,
-            "height": 130.5
+            "height": 130.50003051757813
         }
     },
     "m_Slots": [
@@ -756,10 +756,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -409.5,
-            "y": 375.0,
-            "width": 0.0,
-            "height": 0.0
+            "x": -319.0,
+            "y": 359.0,
+            "width": 220.99996948242188,
+            "height": 94.00003051757813
         }
     },
     "m_Slots": [
@@ -775,7 +775,7 @@
         "HLSL"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -951,13 +951,13 @@
     },
     "m_Name": "Remap",
     "m_DrawState": {
-        "m_Expanded": true,
+        "m_Expanded": false,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -687.5,
-            "y": 411.0,
-            "width": 187.5,
-            "height": 142.0
+            "x": -450.5,
+            "y": 359.0,
+            "width": 131.5,
+            "height": 94.00003051757813
         }
     },
     "m_Slots": [
