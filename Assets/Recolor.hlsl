@@ -15,12 +15,12 @@ void RecolorMain_float
    out float3 Output)
 {
     // Roberts cross operator
-    float3 g1 = C1 - C0;
-    float3 g2 = C3 - C2;
+    float3 g1 = C1.yzy - C0.yzy;
+    float3 g2 = C3.yzy - C2.yzy;
     float g = sqrt(dot(g1, g1) + dot(g2, g2)) * 10;
 
     float3 fill = ColorKey0.rgb;
-    float lum = Luminance(C0.rgb);
+    float lum = Luminance(C0.rrr);
 
     fill = lerp(fill, ColorKey1.rgb, saturate((lum - ColorKey0.w) / (ColorKey1.w - ColorKey0.w)));
     fill = lerp(fill, ColorKey2.rgb, saturate((lum - ColorKey1.w) / (ColorKey2.w - ColorKey1.w)));

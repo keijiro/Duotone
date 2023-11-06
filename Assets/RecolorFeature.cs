@@ -10,7 +10,7 @@ sealed class RecolorPass : ScriptableRenderPass
       (ScriptableRenderContext context, ref RenderingData data)
     {
         var target = data.cameraData.camera.GetComponent<RecolorController>();
-        if (target == null) return;
+        if (target == null || !target.enabled) return;
 
         var cmd = CommandBufferPool.Get("Recolor");
         Blit(cmd, ref data, target.Material);

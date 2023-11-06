@@ -9,7 +9,19 @@ public sealed class RecolorController : MonoBehaviour
     #region Public properties
 
     [field:SerializeField]
+    public Color EdgeColor { get; set; } = Color.black;
+
+    [field:SerializeField, Range(0, 1)]
+    public float EdgeThreshold { get; set; } = 0.5f;
+
+    [field:SerializeField, Range(0, 1)]
+    public float EdgeContrast { get; set; } = 0.5f;
+
+    [field:SerializeField]
     public Gradient FillGradient { get; set; } = DefaultGradient;
+
+    [field:SerializeField, Range(0, 1)]
+    public float FillOpacity { get; set; } = 1;
 
     [field:SerializeField, HideInInspector]
     public Shader Shader { get; set; }
@@ -19,6 +31,13 @@ public sealed class RecolorController : MonoBehaviour
     #endregion
 
     #region Class constants
+
+    static class ShaderIDs
+    {
+        internal static readonly int EdgeColor = Shader.PropertyToID("_EdgeColor");
+        internal static readonly int EdgeThreshold = Shader.PropertyToID("_EdgeThreshold");
+        internal static readonly int FillOpacity = Shader.PropertyToID("_FillOpacity");
+    }
 
     static Gradient DefaultGradient
       => new Gradient
@@ -44,6 +63,8 @@ public sealed class RecolorController : MonoBehaviour
     void OnDestroy()
       => CoreUtils.Destroy(_material);
 
+    void Update() {}
+
     #endregion
 
     #region Controller implementation
@@ -53,6 +74,12 @@ public sealed class RecolorController : MonoBehaviour
     public Material UpdateMaterial()
     {
         _material = _material ?? CoreUtils.CreateEngineMaterial(Shader);
+
+        var edgeThresh = new Vector2(EdgeThreshold, EdgeThreshold + 1.01f - EdgeContrast);
+
+        _material.SetColor(ShaderIDs.EdgeColor, EdgeColor);
+        _material.SetVector(ShaderIDs.EdgeThreshold, edgeThresh);
+        _material.SetFloat(ShaderIDs.FillOpacity, FillOpacity);
 
         var keys = FillGradient.colorKeys;
 
