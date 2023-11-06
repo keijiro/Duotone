@@ -1,4 +1,4 @@
-void RecolorSamplePoints_float
+void DuotoneSamplePoints_float
   (float2 UV, float Width, float Height,
    out float2 UV1, out float2 UV2, out float2 UV3)
 {
@@ -7,7 +7,7 @@ void RecolorSamplePoints_float
     UV3 = float2(UV1.x, UV.y);
 }
 
-void RecolorMain_float
+void DuotoneMain_float
   (float3 C0, float3 C1, float3 C2, float3 C3,
    float4 EdgeColor, float2 EdgeThreshold, float FillOpacity,
    float4 ColorKey0, float4 ColorKey1, float4 ColorKey2, float4 ColorKey3,

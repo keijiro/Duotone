@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace RecolorURP {
+namespace DuotoneURP {
 
 [ExecuteInEditMode]
-public sealed class RecolorController : MonoBehaviour
+public sealed class DuotoneController : MonoBehaviour
 {
     #region Public properties
 
@@ -97,4 +97,4 @@ public sealed class RecolorController : MonoBehaviour
     #endregion
 }
 
-} // namespace RecolorURP
+} // namespace DuotoneURP

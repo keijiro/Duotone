@@ -1379,7 +1379,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "RecolorMain (Custom Function)",
+    "m_Name": "DuotoneMain (Custom Function)",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -1452,7 +1452,7 @@
         "m_SerializableColors": []
     },
     "m_SourceType": 0,
-    "m_FunctionName": "RecolorMain",
+    "m_FunctionName": "DuotoneMain",
     "m_FunctionSource": "1f98259b8d6c82e46938a06355306e1d",
     "m_FunctionBody": "Enter function body here..."
 }
@@ -2286,7 +2286,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "RecolorSamplePoints (Custom Function)",
+    "m_Name": "DuotoneSamplePoints (Custom Function)",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -2329,7 +2329,7 @@
         "m_SerializableColors": []
     },
     "m_SourceType": 0,
-    "m_FunctionName": "RecolorSamplePoints",
+    "m_FunctionName": "DuotoneSamplePoints",
     "m_FunctionSource": "1f98259b8d6c82e46938a06355306e1d",
     "m_FunctionBody": "Enter function body here..."
 }

@@ -2,29 +2,29 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-namespace RecolorURP {
+namespace DuotoneURP {
 
-sealed class RecolorPass : ScriptableRenderPass
+sealed class DuotonePass : ScriptableRenderPass
 {
     public override void Execute
       (ScriptableRenderContext context, ref RenderingData data)
     {
-        var target = data.cameraData.camera.GetComponent<RecolorController>();
+        var target = data.cameraData.camera.GetComponent<DuotoneController>();
         if (target == null || !target.enabled) return;
 
-        var cmd = CommandBufferPool.Get("Recolor");
+        var cmd = CommandBufferPool.Get("Duotone");
         Blit(cmd, ref data, target.Material);
         context.ExecuteCommandBuffer(cmd);
         CommandBufferPool.Release(cmd);
     }
 }
 
-public sealed class RecolorFeature : ScriptableRendererFeature
+public sealed class DuotoneFeature : ScriptableRendererFeature
 {
-    RecolorPass _pass;
+    DuotonePass _pass;
 
     public override void Create()
-      => _pass = new RecolorPass
+      => _pass = new DuotonePass
            { renderPassEvent = RenderPassEvent.AfterRendering };
 
     public override void AddRenderPasses
@@ -32,4 +32,4 @@ public sealed class RecolorFeature : ScriptableRendererFeature
       => renderer.EnqueuePass(_pass);
 }
 
-} // namespace RecolorURP
+} // namespace DuotoneURP
