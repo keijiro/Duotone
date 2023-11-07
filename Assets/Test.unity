@@ -441,8 +441,8 @@ MonoBehaviour:
   <WhiteColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <WhiteLevel>k__BackingField: 0.95
   <FillOpacity>k__BackingField: 1
-  <DitherType>k__BackingField: 3
-  <DitherStrength>k__BackingField: 0.113
+  <DitherType>k__BackingField: 1
+  <DitherStrength>k__BackingField: 0.293
   <Shader>k__BackingField: {fileID: -6465566751694194690, guid: 5d0f93ba092e5a545bab40b50ba2861e, type: 3}
 --- !u!1 &1766256033
 GameObject:

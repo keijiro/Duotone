@@ -25,13 +25,14 @@
             "m_Id": "066fd15b729047868e46772b9f3c21fd"
         },
         {
-            "m_Id": "d145b13ea73245db9efa4d162a5baec7"
-        },
-        {
             "m_Id": "4838017b347c47308af5f1c0f302d421"
         }
     ],
-    "m_Keywords": [],
+    "m_Keywords": [
+        {
+            "m_Id": "5c08babb9ba64fbe88c427d1a7ba4a17"
+        }
+    ],
     "m_Dropdowns": [],
     "m_CategoryData": [
         {
@@ -94,9 +95,6 @@
             "m_Id": "2fb5e334debf4adfa41824bb854cdd30"
         },
         {
-            "m_Id": "298afdab3bcd49a6b6efba6d50cc682a"
-        },
-        {
             "m_Id": "85c769d2cdc741baafb89596d52deb86"
         },
         {
@@ -146,20 +144,6 @@
                     "m_Id": "6b0e538185d1452dacab2d6736f9984b"
                 },
                 "m_SlotId": 5
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "298afdab3bcd49a6b6efba6d50cc682a"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "6b0e538185d1452dacab2d6736f9984b"
-                },
-                "m_SlotId": 13
             }
         },
         {
@@ -752,42 +736,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
-    "m_ObjectId": "298afdab3bcd49a6b6efba6d50cc682a",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Property",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -634.4999389648438,
-            "y": 791.4999389648438,
-            "width": 155.99996948242188,
-            "height": 34.00006103515625
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "c0abbca10a3243fbbc051d4f0ed07635"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_Property": {
-        "m_Id": "d145b13ea73245db9efa4d162a5baec7"
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "2b372c43565643edb8b7c8d316aac3ae",
     "m_Id": 17,
@@ -803,24 +751,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Texture2DInputMaterialSlot",
-    "m_ObjectId": "2f3ff432921c4383bfe4f22cbd7de3b2",
-    "m_Id": 13,
-    "m_DisplayName": "DitherTexture",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "DitherTexture",
-    "m_StageCapability": 3,
-    "m_BareResource": false,
-    "m_Texture": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
-        "m_Guid": ""
-    },
-    "m_DefaultType": 0
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "2fb5e334debf4adfa41824bb854cdd30",
     "m_Group": {
@@ -832,9 +762,9 @@
         "m_Position": {
             "serializedVersion": "2",
             "x": -630.4999389648438,
-            "y": 825.5,
+            "y": 791.4999389648438,
             "width": 151.99996948242188,
-            "height": 34.0
+            "height": 34.00006103515625
         }
     },
     "m_Slots": [
@@ -1230,6 +1160,52 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
+    "m_ObjectId": "5c08babb9ba64fbe88c427d1a7ba4a17",
+    "m_Guid": {
+        "m_GuidSerialized": "16139936-6451-4a9e-b884-b5dba32589aa"
+    },
+    "m_Name": "DitherType",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "DitherType",
+    "m_DefaultReferenceName": "_DITHERTYPE",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_KeywordType": 1,
+    "m_KeywordDefinition": 0,
+    "m_KeywordScope": 0,
+    "m_KeywordStages": 2,
+    "m_Entries": [
+        {
+            "id": 4,
+            "displayName": "Bayer2x2",
+            "referenceName": "BAYER2X2"
+        },
+        {
+            "id": 1,
+            "displayName": "Bayer3x3",
+            "referenceName": "BAYER3X3"
+        },
+        {
+            "id": 2,
+            "displayName": "Bayer4x4",
+            "referenceName": "BAYER4X4"
+        },
+        {
+            "id": 5,
+            "displayName": "Bayer8x8",
+            "referenceName": "BAYER8X8"
+        }
+    ],
+    "m_Value": 2,
+    "m_IsEditable": true
+}
+
+{
     "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
     "m_ObjectId": "60a2ccf61f324d398948e86d4086137e",
@@ -1420,9 +1396,6 @@
             "m_Id": "d3672c34f1f048c798a8699c810a6817"
         },
         {
-            "m_Id": "2f3ff432921c4383bfe4f22cbd7de3b2"
-        },
-        {
             "m_Id": "a7b91b8622be4e5097e5911b2e6b6806"
         },
         {
@@ -1598,7 +1571,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_ScreenSpaceType": 1
+    "m_ScreenSpaceType": 0
 }
 
 {
@@ -1996,19 +1969,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
-    "m_ObjectId": "c0abbca10a3243fbbc051d4f0ed07635",
-    "m_Id": 0,
-    "m_DisplayName": "DitherTexture",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_BareResource": false
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.ColorRGBAMaterialSlot",
     "m_ObjectId": "c69c4e00ad8b4ac795ee7f92dc0e1354",
     "m_Id": 2,
@@ -2092,36 +2052,6 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
-    "m_ObjectId": "d145b13ea73245db9efa4d162a5baec7",
-    "m_Guid": {
-        "m_GuidSerialized": "23fe67f4-96d6-4df4-a918-6a9291ffed10"
-    },
-    "m_Name": "DitherTexture",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DitherTexture",
-    "m_DefaultReferenceName": "_DitherTexture",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
-        "m_Guid": ""
-    },
-    "isMainTexture": false,
-    "useTilingAndOffset": false,
-    "m_Modifiable": true,
-    "m_DefaultType": 2
 }
 
 {
@@ -2426,10 +2356,10 @@
             "m_Id": "3136527c3b374690981fcfa697030a4f"
         },
         {
-            "m_Id": "d145b13ea73245db9efa4d162a5baec7"
+            "m_Id": "4838017b347c47308af5f1c0f302d421"
         },
         {
-            "m_Id": "4838017b347c47308af5f1c0f302d421"
+            "m_Id": "5c08babb9ba64fbe88c427d1a7ba4a17"
         }
     ]
 }
