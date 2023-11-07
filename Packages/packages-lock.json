@@ -63,6 +63,13 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "jp.keijiro.danish-statues": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
     "com.unity.modules.imgui": {
       "version": "1.0.0",
       "depth": 3,

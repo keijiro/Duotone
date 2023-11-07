@@ -1,5 +1,15 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "Keijiro",
+      "url": "https://registry.npmjs.com",
+      "scopes": [
+        "jp.keijiro"
+      ]
+    }
+  ],
   "dependencies": {
-    "com.unity.render-pipelines.universal": "14.0.9"
+    "com.unity.render-pipelines.universal": "14.0.9",
+    "jp.keijiro.danish-statues": "1.0.0"
   }
 }
