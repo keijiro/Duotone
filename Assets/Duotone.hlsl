@@ -57,7 +57,7 @@ void DuotoneMain_float
 #elif defined(_DITHERTYPE_BAYER4X4)
     float dither = DuotoneBayerArray[(iSPos.x % 4) + (iSPos.y % 4) * 4 + 13];
 #else
-    float dither = DuotoneBayerArray[(iSPos.x % 8) + (iSPos.y % 8) * 4 + 29];
+    float dither = DuotoneBayerArray[(iSPos.x % 8) + (iSPos.y % 8) * 8 + 29];
 #endif
     dither = (dither - 0.5) * DitherStrength;
 

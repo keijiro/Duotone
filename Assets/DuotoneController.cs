@@ -92,19 +92,15 @@ public sealed class DuotoneController : MonoBehaviour
     {
         _material = _material ?? CoreUtils.CreateEngineMaterial(Shader);
 
-        _material.DisableKeyword("_DITHERTYPE_BAYER2X2");
-        _material.DisableKeyword("_DITHERTYPE_BAYER3X3");
-        _material.DisableKeyword("_DITHERTYPE_BAYER4X4");
-        _material.DisableKeyword("_DITHERTYPE_BAYER8X8");
+        var bayer2x2 = new LocalKeyword(Shader, "_DITHERTYPE_BAYER2X2");
+        var bayer3x3 = new LocalKeyword(Shader, "_DITHERTYPE_BAYER3X3");
+        var bayer4x4 = new LocalKeyword(Shader, "_DITHERTYPE_BAYER4X4");
+        var bayer8x8 = new LocalKeyword(Shader, "_DITHERTYPE_BAYER8X8");
 
-        if (DitherType == DitherType.Bayer2x2)
-            _material.EnableKeyword("_DITHERTYPE_BAYER2X2");
-        if (DitherType == DitherType.Bayer3x3)
-            _material.EnableKeyword("_DITHERTYPE_BAYER3X3");
-        if (DitherType == DitherType.Bayer4x4)
-            _material.EnableKeyword("_DITHERTYPE_BAYER4X4");
-        if (DitherType == DitherType.Bayer8x8)
-            _material.EnableKeyword("_DITHERTYPE_BAYER8X8");
+        _material.SetKeyword(bayer2x2, DitherType == DitherType.Bayer2x2);
+        _material.SetKeyword(bayer3x3, DitherType == DitherType.Bayer3x3);
+        _material.SetKeyword(bayer4x4, DitherType == DitherType.Bayer4x4);
+        _material.SetKeyword(bayer8x8, DitherType == DitherType.Bayer8x8);
 
         var edgeThresh = new Vector2(EdgeThreshold, EdgeThreshold + 1.01f - EdgeContrast);
         var color0 = ToVector(BlackColor, BlackLevel);
