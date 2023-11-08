@@ -38,7 +38,7 @@ void DuotoneSamplePoints_float
 void DuotoneMain_float
   (float2 SPos, float Width, float Height,
    float3 C0, float3 C1, float3 C2, float3 C3,
-   float4 EdgeColor, float2 EdgeThreshold, float FillOpacity,
+   float4 EdgeColor, float2 EdgeThreshold,
    float4 ColorKey0, float4 ColorKey1, float4 ColorKey2, float4 ColorKey3,
    float DitherStrength,
    out float3 Output)
@@ -69,6 +69,5 @@ void DuotoneMain_float
     fill = lum > ColorKey2.w ? ColorKey3.rgb : fill;
 
     float edge = smoothstep(EdgeThreshold.x, EdgeThreshold.y, g);
-    float3 cb = lerp(C0, fill, FillOpacity);
-    Output = lerp(cb, EdgeColor.rgb, edge * EdgeColor.a) + ((float)((uint)SPos.x % 8) / 8.0);
+    Output = lerp(fill, EdgeColor.rgb, edge * EdgeColor.a) + ((float)((uint)SPos.x % 8) / 8.0);
 }

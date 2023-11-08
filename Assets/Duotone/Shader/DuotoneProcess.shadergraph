@@ -4,9 +4,6 @@
     "m_ObjectId": "747c77508dfd4e1fa17a84034509c196",
     "m_Properties": [
         {
-            "m_Id": "f965a6a10dbc449faeb696f3e4e6583b"
-        },
-        {
             "m_Id": "89691a4ec33f44bc98d9b53c5f1d363f"
         },
         {
@@ -45,9 +42,6 @@
         },
         {
             "m_Id": "eabef10534124a4293919c4db8bab341"
-        },
-        {
-            "m_Id": "3384adf1212043d1b8af04a6b126ac65"
         },
         {
             "m_Id": "207d8ee09f464aa197ed3e515d4cc8c9"
@@ -158,20 +152,6 @@
                     "m_Id": "6b0e538185d1452dacab2d6736f9984b"
                 },
                 "m_SlotId": 14
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "3384adf1212043d1b8af04a6b126ac65"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "6b0e538185d1452dacab2d6736f9984b"
-                },
-                "m_SlotId": 8
             }
         },
         {
@@ -847,42 +827,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
-    "m_ObjectId": "3384adf1212043d1b8af04a6b126ac65",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Property",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -610.5,
-            "y": 621.5,
-            "width": 130.0,
-            "height": 34.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "eef58c8119214444a48bf430742fd30d"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_Property": {
-        "m_Id": "f965a6a10dbc449faeb696f3e4e6583b"
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.ColorRGBMaterialSlot",
     "m_ObjectId": "37344d0f295e4ef69f84411b93d4ec74",
     "m_Id": 0,
@@ -1379,9 +1323,6 @@
         },
         {
             "m_Id": "65c7213e04334898bd83c0f0bfead5a3"
-        },
-        {
-            "m_Id": "ec8d6d87bc3443f1bacc2ab39729fed5"
         },
         {
             "m_Id": "ea55e84ce3834b28ae96f8527a291b61"
@@ -2275,36 +2216,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "ec8d6d87bc3443f1bacc2ab39729fed5",
-    "m_Id": 8,
-    "m_DisplayName": "FillOpacity",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "FillOpacity",
-    "m_StageCapability": 3,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "eef58c8119214444a48bf430742fd30d",
-    "m_Id": 0,
-    "m_DisplayName": "FillOpacity",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "f11e7dd7eb2246bd8277b7017a2587a8",
     "m_Id": 0,
@@ -2334,9 +2245,6 @@
     "m_ObjectId": "f225b40cc6de456c808803b158388e08",
     "m_Name": "",
     "m_ChildObjectList": [
-        {
-            "m_Id": "f965a6a10dbc449faeb696f3e4e6583b"
-        },
         {
             "m_Id": "89691a4ec33f44bc98d9b53c5f1d363f"
         },
@@ -2532,34 +2440,6 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "SurfaceDescription.BaseColor"
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "f965a6a10dbc449faeb696f3e4e6583b",
-    "m_Guid": {
-        "m_GuidSerialized": "9f6d63da-9a83-4c81-a323-a86d5f8dfb5e"
-    },
-    "m_Name": "FillOpacity",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "FillOpacity",
-    "m_DefaultReferenceName": "_FillOpacity",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 1.0,
-    "m_FloatType": 1,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
-    }
 }
 
 {

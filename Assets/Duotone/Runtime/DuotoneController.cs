@@ -42,7 +42,6 @@ public sealed partial class DuotoneController : MonoBehaviour
         // Shader properties
         _material.SetColor(_token.EdgeColor, EdgeColor);
         _material.SetVector(_token.EdgeThreshold, edgeThresh);
-        _material.SetFloat(_token.FillOpacity, FillOpacity);
         _material.SetVector(_token.ColorKey0, ToVector(BlackColor, BlackLevel));
         _material.SetVector(_token.ColorKey1, ToVector(LowColor, SplitLevel));
         _material.SetVector(_token.ColorKey2, ToVector(HighColor, WhiteLevel));
