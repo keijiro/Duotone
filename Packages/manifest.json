@@ -10,6 +10,9 @@
   ],
   "dependencies": {
     "com.unity.render-pipelines.universal": "14.0.9",
-    "jp.keijiro.danish-statues": "1.0.0"
+    "com.unity.visualeffectgraph": "14.0.9",
+    "jp.keijiro.danish-statues": "1.0.0",
+    "jp.keijiro.klak.motion": "1.1.0",
+    "jp.keijiro.vfxgraphassets": "1.2.0"
   }
 }
