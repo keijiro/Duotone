@@ -13,7 +13,6 @@ public sealed partial class DuotoneController
         public int ColorKey1;
         public int ColorKey2;
         public int ColorKey3;
-
         public LocalKeyword Bayer2x2;
         public LocalKeyword Bayer3x3;
         public LocalKeyword Bayer4x4;
@@ -27,7 +26,6 @@ public sealed partial class DuotoneController
             ColorKey1 = Shader.PropertyToID("_ColorKey1");
             ColorKey2 = Shader.PropertyToID("_ColorKey2");
             ColorKey3 = Shader.PropertyToID("_ColorKey3");
-
             Bayer2x2 = new LocalKeyword(shader, "_DITHERTYPE_BAYER2X2");
             Bayer3x3 = new LocalKeyword(shader, "_DITHERTYPE_BAYER3X3");
             Bayer4x4 = new LocalKeyword(shader, "_DITHERTYPE_BAYER4X4");
