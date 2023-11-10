@@ -11,6 +11,9 @@ public sealed partial class DuotoneController : MonoBehaviour
     void OnDestroy()
       => CoreUtils.Destroy(_material);
 
+    void OnDisable()
+      => OnDestroy();
+
     void Update() {} // Just for providing the component enable switch.
 
     #endregion
