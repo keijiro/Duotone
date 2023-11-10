@@ -9,7 +9,6 @@ public sealed partial class DuotoneController
     {
         public int DitherStrength;
         public int EdgeColor;
-        public int EdgeThreshold;
         public int ColorKey0;
         public int ColorKey1;
         public int ColorKey2;
@@ -24,7 +23,6 @@ public sealed partial class DuotoneController
         {
             DitherStrength = Shader.PropertyToID("_DitherStrength");
             EdgeColor = Shader.PropertyToID("_EdgeColor");
-            EdgeThreshold = Shader.PropertyToID("_EdgeThreshold");
             ColorKey0 = Shader.PropertyToID("_ColorKey0");
             ColorKey1 = Shader.PropertyToID("_ColorKey1");
             ColorKey2 = Shader.PropertyToID("_ColorKey2");

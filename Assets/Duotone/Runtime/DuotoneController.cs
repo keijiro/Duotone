@@ -31,8 +31,6 @@ public sealed partial class DuotoneController : MonoBehaviour
             _material = CoreUtils.CreateEngineMaterial(Shader);
         }
 
-        var edgeThresh = new Vector2(EdgeThreshold, EdgeThreshold + 1.01f - EdgeContrast);
-
         // Dither type keywords
         _material.SetKeyword(_token.Bayer2x2, DitherType == DitherType.Bayer2x2);
         _material.SetKeyword(_token.Bayer3x3, DitherType == DitherType.Bayer3x3);
@@ -41,7 +39,6 @@ public sealed partial class DuotoneController : MonoBehaviour
 
         // Shader properties
         _material.SetColor(_token.EdgeColor, EdgeColor);
-        _material.SetVector(_token.EdgeThreshold, edgeThresh);
         _material.SetVector(_token.ColorKey0, ToVector(BlackColor, BlackLevel));
         _material.SetVector(_token.ColorKey1, ToVector(LowColor, SplitLevel));
         _material.SetVector(_token.ColorKey2, ToVector(HighColor, WhiteLevel));

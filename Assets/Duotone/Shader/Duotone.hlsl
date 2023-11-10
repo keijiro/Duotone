@@ -38,15 +38,15 @@ void DuotoneSamplePoints_float
 void DuotoneMain_float
   (float2 SPos, float Width, float Height,
    float3 C0, float3 C1, float3 C2, float3 C3,
-   float4 EdgeColor, float2 EdgeThreshold,
+   float4 EdgeColor,
    float4 ColorKey0, float4 ColorKey1, float4 ColorKey2, float4 ColorKey3,
    float DitherStrength,
    out float3 Output)
 {
     // Roberts cross operator
-    float3 g1 = C1.yzy - C0.yzy;
-    float3 g2 = C3.yzy - C2.yzy;
-    float g = sqrt(dot(g1, g1) + dot(g2, g2)) * 10;
+    float2 g1 = C1.yz - C0.yz;
+    float2 g2 = C3.yz - C2.yz;
+    float2 g = sqrt(g1 * g1 + g2 * g2);
 
     // Dithering
     uint2 iSPos = SPos * float2(Width, Height);
@@ -68,6 +68,8 @@ void DuotoneMain_float
     fill = lum > ColorKey1.w ? ColorKey2.rgb : fill;
     fill = lum > ColorKey2.w ? ColorKey3.rgb : fill;
 
-    float edge = smoothstep(EdgeThreshold.x, EdgeThreshold.y, g);
+    float edge1 = smoothstep(0.5, 0.8, g.x * 10);
+    float edge2 = smoothstep(0.3, 0.4, g.y * 10);
+    float edge = max(edge1, edge2);
     Output = lerp(fill, EdgeColor.rgb, edge * EdgeColor.a) + ((float)((uint)SPos.x % 8) / 8.0);
 }

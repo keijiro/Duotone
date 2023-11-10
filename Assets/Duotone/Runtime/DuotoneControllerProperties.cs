@@ -11,12 +11,6 @@ public sealed partial class DuotoneController
     [field:SerializeField, Space]
     public Color EdgeColor { get; set; } = Color.black;
 
-    [field:SerializeField, Range(0, 1)]
-    public float EdgeThreshold { get; set; } = 0.5f;
-
-    [field:SerializeField, Range(0, 1)]
-    public float EdgeContrast { get; set; } = 0.5f;
-
     [field:SerializeField, Space]
     public Color LowColor { get; set; } = Color.blue;
 
