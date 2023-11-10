@@ -265,8 +265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <EdgeColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
-  <EdgeThreshold>k__BackingField: 0.296
-  <EdgeContrast>k__BackingField: 1
   <LowColor>k__BackingField: {r: 0.4528302, g: 0, b: 0.12476911, a: 1}
   <HighColor>k__BackingField: {r: 0.95425546, g: 1, b: 0, a: 1}
   <SplitLevel>k__BackingField: 0.5
@@ -455,7 +453,7 @@ GameObject:
   - component: {fileID: 915334980}
   - component: {fileID: 915334979}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,7 +479,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 3f4cefc320a075549bafc06223242bb9, type: 3}
+  - {fileID: 2100000, guid: bdeb0b80096ea184586bff0ec5b80180, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
