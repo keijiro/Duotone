@@ -47,27 +47,27 @@ void DuotoneMain_float
     float2 g = sqrt(g1 * g1 + g2 * g2);
 
     // Dithering
-    uint2 iSPos = SPos * float2(Width, Height);
+    uint2 psp = SPos * float2(Width, Height);
 #if defined(_DITHERTYPE_BAYER2X2)
-    float dither = DuotoneBayerArray[(iSPos.x % 2) + (iSPos.y % 2) * 2];
+    float dither = DuotoneBayerArray[(psp.x % 2) + (psp.y % 2) * 2];
 #elif defined(_DITHERTYPE_BAYER3X3)
-    float dither = DuotoneBayerArray[(iSPos.x % 3) + (iSPos.y % 3) * 3];
+    float dither = DuotoneBayerArray[(psp.x % 3) + (psp.y % 3) * 3];
 #elif defined(_DITHERTYPE_BAYER4X4)
-    float dither = DuotoneBayerArray[(iSPos.x % 4) + (iSPos.y % 4) * 4];
+    float dither = DuotoneBayerArray[(psp.x % 4) + (psp.y % 4) * 4];
 #else
-    float dither = DuotoneBayerArray[(iSPos.x % 8) + (iSPos.y % 8) * 8];
+    float dither = DuotoneBayerArray[(psp.x % 8) + (psp.y % 8) * 8];
 #endif
     dither = (dither - 0.5) * DitherStrength;
 
     float3 fill = ColorKey0.rgb;
-    float lum = Luminance(C0.rrr) + dither;
-
+    float lum = C0.x + dither;
     fill = lum > ColorKey0.w ? ColorKey1.rgb : fill;
     fill = lum > ColorKey1.w ? ColorKey2.rgb : fill;
     fill = lum > ColorKey2.w ? ColorKey3.rgb : fill;
 
-    float edge1 = smoothstep(0.1, 0.2, g.x);
-    float edge2 = smoothstep(0.3, 0.4, g.y * 10);
+    float edge1 = smoothstep(0.10, 0.20, g.x);
+    float edge2 = smoothstep(0.03, 0.04, g.y);
     float edge = max(edge1, edge2);
-    Output = lerp(fill, EdgeColor.rgb, edge * EdgeColor.a) + ((float)((uint)SPos.x % 8) / 8.0);
+
+    Output = lerp(fill, EdgeColor.rgb, edge * EdgeColor.a);
 }
