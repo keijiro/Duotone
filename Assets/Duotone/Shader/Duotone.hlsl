@@ -68,7 +68,7 @@ void DuotoneMain_float
     fill = lum > ColorKey1.w ? ColorKey2.rgb : fill;
     fill = lum > ColorKey2.w ? ColorKey3.rgb : fill;
 
-    float edge1 = smoothstep(0.5, 0.8, g.x * 10);
+    float edge1 = smoothstep(0.1, 0.2, g.x);
     float edge2 = smoothstep(0.3, 0.4, g.y * 10);
     float edge = max(edge1, edge2);
     Output = lerp(fill, EdgeColor.rgb, edge * EdgeColor.a) + ((float)((uint)SPos.x % 8) / 8.0);
