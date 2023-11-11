@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace DuotoneURP {
+namespace Duotone {
 
 public sealed partial class DuotoneController
 {
@@ -34,4 +34,4 @@ public sealed partial class DuotoneController
     }
 }
 
-} // namespace DuotoneURP
+} // namespace Duotone

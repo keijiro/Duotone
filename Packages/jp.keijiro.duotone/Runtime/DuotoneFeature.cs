@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-namespace DuotoneURP {
+namespace Duotone {
 
 sealed class DuotonePass : ScriptableRenderPass
 {
@@ -32,4 +32,4 @@ public sealed class DuotoneFeature : ScriptableRendererFeature
       => renderer.EnqueuePass(_pass);
 }
 
-} // namespace DuotoneURP
+} // namespace Duotone

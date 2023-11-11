@@ -1,4 +1,4 @@
-#include "Assets/Duotone/DuotoneDither.hlsl"
+#include "Packages/jp.keijiro.duotone/Shaders/DuotoneDither.hlsl"
 
 void DuotoneSamplePoints_float
   (float2 UV, float Width, float Height,

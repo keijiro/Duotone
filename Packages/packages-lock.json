@@ -79,6 +79,12 @@
       "dependencies": {},
       "url": "https://registry.npmjs.com"
     },
+    "jp.keijiro.duotone.urp": {
+      "version": "file:jp.keijiro.duotone",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "jp.keijiro.klak.lineargradient": {
       "version": "1.0.2",
       "depth": 1,

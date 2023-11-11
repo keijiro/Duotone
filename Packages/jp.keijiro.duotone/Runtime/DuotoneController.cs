@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace DuotoneURP {
+namespace Duotone {
 
 [ExecuteInEditMode]
 public sealed partial class DuotoneController : MonoBehaviour
@@ -54,4 +54,4 @@ public sealed partial class DuotoneController : MonoBehaviour
     #endregion
 }
 
-} // namespace DuotoneURP
+} // namespace Duotone
