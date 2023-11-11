@@ -6,7 +6,7 @@ public sealed partial class DuotoneController
 {
     #region Public properties
 
-    [field:SerializeField, Space]
+    [field:SerializeField]
     public Color LowColor { get; set; } = Color.blue;
 
     [field:SerializeField]
@@ -15,22 +15,22 @@ public sealed partial class DuotoneController
     [field:SerializeField]
     public float SplitLevel { get; set; } = 0.5f;
 
-    [field:SerializeField, Space]
+    [field:SerializeField]
     public Color BlackColor { get; set; } = Color.black;
 
     [field:SerializeField]
     public float BlackLevel { get; set; } = 0.05f;
 
-    [field:SerializeField, Space]
+    [field:SerializeField]
     public Color WhiteColor { get; set; } = Color.white;
 
     [field:SerializeField]
     public float WhiteLevel { get; set; } = 0.95f;
 
-    [field:SerializeField, Space]
+    [field:SerializeField]
     public Color EdgeColor { get; set; } = Color.black;
 
-    [field:SerializeField, Space]
+    [field:SerializeField]
     public DitherType DitherType { get; set; } = DitherType.Bayer3x3;
 
     [field:SerializeField, Range(0, 1)]
