@@ -4,7 +4,8 @@ void DuotoneSamplePoints_float
   (float2 UV, float Width, float Height,
    out float2 UV1, out float2 UV2, out float2 UV3)
 {
-    UV1 = UV + float2(1 / Width, 1 / Height);
+    float stride = rcp(float2(Width, Height));
+    UV1 = min(UV + stride, 1 - stride);
     UV2 = float2(UV.x, UV1.y);
     UV3 = float2(UV1.x, UV.y);
 }
@@ -16,6 +17,7 @@ void DuotoneMain_float
    float4 EdgeColor, float DitherStrength,
    out float3 Output)
 {
+#if defined(_DUOTONE_ENABLE_EDGE)
     // Edge detection with Roberts cross operator
     float2 g1 = C1.yz - C0.yz;
     float2 g2 = C3.yz - C2.yz;
@@ -23,6 +25,9 @@ void DuotoneMain_float
     float edge1 = smoothstep(0.10, 0.20, g.x);
     float edge2 = smoothstep(0.03, 0.04, g.y);
     float edge = max(edge1, edge2);
+#else
+    float edge = 0;
+#endif
 
     // Dithering matrix
     float dither = DuotoneDither(SPos * float2(Width, Height));

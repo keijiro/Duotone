@@ -34,19 +34,22 @@ public sealed partial class DuotoneController : MonoBehaviour
             _material = CoreUtils.CreateEngineMaterial(Shader);
         }
 
-        // Dither type keywords
-        _material.SetKeyword(_token.Bayer2x2, DitherType == DitherType.Bayer2x2);
-        _material.SetKeyword(_token.Bayer3x3, DitherType == DitherType.Bayer3x3);
-        _material.SetKeyword(_token.Bayer4x4, DitherType == DitherType.Bayer4x4);
-        _material.SetKeyword(_token.Bayer8x8, DitherType == DitherType.Bayer8x8);
-
-        // Shader properties
-        _material.SetColor(_token.EdgeColor, EdgeColor);
+        // Color keys
         _material.SetVector(_token.ColorKey0, ToVector(BlackColor, BlackLevel));
         _material.SetVector(_token.ColorKey1, ToVector(LowColor, SplitLevel));
         _material.SetVector(_token.ColorKey2, ToVector(HighColor, WhiteLevel));
         _material.SetVector(_token.ColorKey3, ToVector(WhiteColor, 1));
+
+        // Dithering
+        _material.SetKeyword(_token.Bayer2x2, DitherType == DitherType.Bayer2x2);
+        _material.SetKeyword(_token.Bayer3x3, DitherType == DitherType.Bayer3x3);
+        _material.SetKeyword(_token.Bayer4x4, DitherType == DitherType.Bayer4x4);
+        _material.SetKeyword(_token.Bayer8x8, DitherType == DitherType.Bayer8x8);
         _material.SetFloat(_token.DitherStrength, DitherStrength);
+
+        // Edge detection
+        _material.SetKeyword(_token.EnableEdge, EdgeColor.a > 0);
+        _material.SetColor(_token.EdgeColor, EdgeColor);
 
         return _material;
     }

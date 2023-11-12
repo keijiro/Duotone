@@ -8,7 +8,7 @@ static float DuotoneBayerArray[] =
 
 static float DuotoneDither(uint2 psp)
 {
-    return DuotoneBayerArray[(psp.x % 2) + (psp.y % 2) * 2];
+    return DuotoneBayerArray[(psp.x & 1) + (psp.y & 1) * 2];
 }
 
 #elif defined(_DITHERTYPE_BAYER3X3)
@@ -37,7 +37,7 @@ static float DuotoneBayerArray[] =
 
 static float DuotoneDither(uint2 psp)
 {
-    return DuotoneBayerArray[(psp.x % 4) + (psp.y % 4) * 4];
+    return DuotoneBayerArray[(psp.x & 3) + (psp.y & 3) * 4];
 }
 
 #else
@@ -56,7 +56,7 @@ static float DuotoneBayerArray[] =
 
 static float DuotoneDither(uint2 psp)
 {
-    return DuotoneBayerArray[(psp.x % 8) + (psp.y % 8) * 8];
+    return DuotoneBayerArray[(psp.x & 7) + (psp.y & 7) * 8];
 }
 
 #endif

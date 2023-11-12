@@ -28,7 +28,7 @@ public sealed partial class DuotoneController
     public float WhiteLevel { get; set; } = 0.95f;
 
     [field:SerializeField]
-    public Color EdgeColor { get; set; } = Color.black;
+    public Color EdgeColor { get; set; } = Color.clear;
 
     [field:SerializeField]
     public DitherType DitherType { get; set; } = DitherType.Bayer3x3;

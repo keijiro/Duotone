@@ -25,6 +25,9 @@
     "m_Keywords": [
         {
             "m_Id": "5c08babb9ba64fbe88c427d1a7ba4a17"
+        },
+        {
+            "m_Id": "4d78468ad1e34901beaa89f8f9eb68ea"
         }
     ],
     "m_Dropdowns": [],
@@ -940,6 +943,31 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
+    "m_ObjectId": "4d78468ad1e34901beaa89f8f9eb68ea",
+    "m_Guid": {
+        "m_GuidSerialized": "d2e8517e-a472-4dc6-b301-f69380eebe35"
+    },
+    "m_Name": "EnableEdge",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "EnableEdge",
+    "m_DefaultReferenceName": "_ENABLEEDGE",
+    "m_OverrideReferenceName": "_DUOTONE_ENABLE_EDGE",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_KeywordType": 0,
+    "m_KeywordDefinition": 0,
+    "m_KeywordScope": 0,
+    "m_KeywordStages": 2,
+    "m_Entries": [],
+    "m_Value": 1,
+    "m_IsEditable": true
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "4f8ab7e10afe491b8ed3cba50c84ffe4",
@@ -1094,7 +1122,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "DitherType",
     "m_DefaultReferenceName": "_DITHERTYPE",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_DUOTONE",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -2157,6 +2185,9 @@
         },
         {
             "m_Id": "5c08babb9ba64fbe88c427d1a7ba4a17"
+        },
+        {
+            "m_Id": "4d78468ad1e34901beaa89f8f9eb68ea"
         }
     ]
 }
