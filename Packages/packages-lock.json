@@ -79,7 +79,7 @@
       "dependencies": {},
       "url": "https://registry.npmjs.com"
     },
-    "jp.keijiro.duotone.urp": {
+    "jp.keijiro.duotone": {
       "version": "file:jp.keijiro.duotone",
       "depth": 0,
       "source": "embedded",

@@ -5,7 +5,7 @@
   "displayName": "Duotone",
   "keywords": [ "unity" ],
   "license": "Unlicense",
-  "name": "jp.keijiro.duotone.urp",
+  "name": "jp.keijiro.duotone",
   "repository": "github:keijiro/DuotoneURP",
   "unity": "2022.3",
   "unityRelease": "0f1",
