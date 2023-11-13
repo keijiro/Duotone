@@ -14,10 +14,10 @@ void DuotoneMain_float
   (float2 SPos, float Width, float Height,
    float3 C0, float3 C1, float3 C2, float3 C3,
    float4 ColorKey0, float4 ColorKey1, float4 ColorKey2, float4 ColorKey3,
-   float4 EdgeColor, float DitherStrength,
+   float4 ContourColor, float DitherStrength,
    out float3 Output)
 {
-#if defined(_DUOTONE_ENABLE_EDGE)
+#if defined(_DUOTONE_EXTENDED)
     // Edge detection with Roberts cross operator
     float2 g1 = C1.yz - C0.yz;
     float2 g2 = C3.yz - C2.yz;
@@ -45,5 +45,5 @@ void DuotoneMain_float
     fill = lum > ColorKey2.w ? ColorKey3.rgb : fill;
 
     // Composition
-    Output = lerp(fill, EdgeColor.rgb, edge * EdgeColor.a);
+    Output = lerp(fill, ContourColor.rgb, edge * ContourColor.a);
 }

@@ -23,7 +23,7 @@ public sealed partial class DuotoneController : MonoBehaviour
     ShaderToken _token;
     Material _material;
 
-    static Vector4 ToVector(Color color, float alpha)
+    static Vector4 ToColorKey(Color color, float alpha)
       => new Vector4(color.r, color.g, color.b, alpha);
 
     public Material UpdateMaterial()
@@ -35,10 +35,10 @@ public sealed partial class DuotoneController : MonoBehaviour
         }
 
         // Color keys
-        _material.SetVector(_token.ColorKey0, ToVector(BlackColor, BlackLevel));
-        _material.SetVector(_token.ColorKey1, ToVector(LowColor, SplitLevel));
-        _material.SetVector(_token.ColorKey2, ToVector(HighColor, WhiteLevel));
-        _material.SetVector(_token.ColorKey3, ToVector(WhiteColor, 1));
+        _material.SetVector(_token.ColorKey0, ToColorKey(BlackColor, BlackLevel));
+        _material.SetVector(_token.ColorKey1, ToColorKey(LowColor, SplitLevel));
+        _material.SetVector(_token.ColorKey2, ToColorKey(HighColor, WhiteLevel));
+        _material.SetVector(_token.ColorKey3, ToColorKey(WhiteColor, 1));
 
         // Dithering
         _material.SetKeyword(_token.Bayer2x2, DitherType == DitherType.Bayer2x2);
@@ -47,9 +47,9 @@ public sealed partial class DuotoneController : MonoBehaviour
         _material.SetKeyword(_token.Bayer8x8, DitherType == DitherType.Bayer8x8);
         _material.SetFloat(_token.DitherStrength, DitherStrength);
 
-        // Edge detection
-        _material.SetKeyword(_token.EnableEdge, SourceMode == SourceMode.DuotoneSurface);
-        _material.SetColor(_token.EdgeColor, ContourColor);
+        // Extended mode (Duotone Surface source mode)
+        _material.SetKeyword(_token.Extended, SourceMode == SourceMode.DuotoneSurface);
+        _material.SetColor(_token.ContourColor, ContourColor);
 
         return _material;
     }

@@ -474,31 +474,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
-    "m_ObjectId": "077bb8c555934c84b6a6586bbc698295",
-    "m_Id": 7,
-    "m_DisplayName": "EdgeColor",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "EdgeColor",
-    "m_StageCapability": 3,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "0977ea47d8784b6f82b1b3a5a36c3c40",
     "m_Id": 0,
@@ -949,11 +924,11 @@
     "m_Guid": {
         "m_GuidSerialized": "d2e8517e-a472-4dc6-b301-f69380eebe35"
     },
-    "m_Name": "EnableEdge",
+    "m_Name": "Extended",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "EnableEdge",
-    "m_DefaultReferenceName": "_ENABLEEDGE",
-    "m_OverrideReferenceName": "_DUOTONE_ENABLE_EDGE",
+    "m_RefNameGeneratedByDisplayName": "Extended",
+    "m_DefaultReferenceName": "_EXTENDED",
+    "m_OverrideReferenceName": "_DUOTONE_EXTENDED",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -1285,9 +1260,6 @@
     },
     "m_Slots": [
         {
-            "m_Id": "6ad8a5849df949c7bdeb68ca3662358b"
-        },
-        {
             "m_Id": "8430db23725545b8aa10e7f081317d9d"
         },
         {
@@ -1321,10 +1293,13 @@
             "m_Id": "d3672c34f1f048c798a8699c810a6817"
         },
         {
-            "m_Id": "077bb8c555934c84b6a6586bbc698295"
+            "m_Id": "9373ed6122154601b5b541e6fcb968fe"
         },
         {
             "m_Id": "a7b91b8622be4e5097e5911b2e6b6806"
+        },
+        {
+            "m_Id": "6ad8a5849df949c7bdeb68ca3662358b"
         }
     ],
     "synonyms": [
@@ -1506,10 +1481,10 @@
     "m_Guid": {
         "m_GuidSerialized": "ec2ca8e6-365d-486a-a744-757afa93bf94"
     },
-    "m_Name": "EdgeColor",
+    "m_Name": "ContourColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "EdgeColor",
-    "m_DefaultReferenceName": "_EdgeColor",
+    "m_RefNameGeneratedByDisplayName": "ContourColor",
+    "m_DefaultReferenceName": "_ContourColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -1673,9 +1648,34 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "9373ed6122154601b5b541e6fcb968fe",
+    "m_Id": 7,
+    "m_DisplayName": "ContourColor",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "ContourColor",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "9c1cd2a118c74e51ba38fa4eba04d420",
     "m_Id": 0,
-    "m_DisplayName": "EdgeColor",
+    "m_DisplayName": "ContourColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2166,9 +2166,6 @@
     "m_Name": "",
     "m_ChildObjectList": [
         {
-            "m_Id": "89691a4ec33f44bc98d9b53c5f1d363f"
-        },
-        {
             "m_Id": "066fd15b729047868e46772b9f3c21fd"
         },
         {
@@ -2179,6 +2176,9 @@
         },
         {
             "m_Id": "3136527c3b374690981fcfa697030a4f"
+        },
+        {
+            "m_Id": "89691a4ec33f44bc98d9b53c5f1d363f"
         },
         {
             "m_Id": "4838017b347c47308af5f1c0f302d421"
