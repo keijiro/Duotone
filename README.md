@@ -14,6 +14,10 @@ It provides the following two features:
   you must use the Duotone Surface shader to embed normal/depth information
   into the color buffer.
 
+## System requirements
+
+- Unity 2022.3 LTS or later
+
 ## How to install
 
 [Follow those instructions] to set up the scoped registry. Then, you can install
