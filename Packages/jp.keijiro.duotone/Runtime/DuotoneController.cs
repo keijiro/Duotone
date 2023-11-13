@@ -48,8 +48,8 @@ public sealed partial class DuotoneController : MonoBehaviour
         _material.SetFloat(_token.DitherStrength, DitherStrength);
 
         // Edge detection
-        _material.SetKeyword(_token.EnableEdge, EdgeColor.a > 0);
-        _material.SetColor(_token.EdgeColor, EdgeColor);
+        _material.SetKeyword(_token.EnableEdge, SourceMode == SourceMode.DuotoneSurface);
+        _material.SetColor(_token.EdgeColor, ContourColor);
 
         return _material;
     }

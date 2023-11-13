@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e61628d3a0e081469e7b26dcd216e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <EdgeColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
+  <SourceMode>k__BackingField: 1
   <LowColor>k__BackingField: {r: 0.4528302, g: 0, b: 0.12476911, a: 1}
   <HighColor>k__BackingField: {r: 0.95425546, g: 1, b: 0, a: 1}
   <SplitLevel>k__BackingField: 0.5
@@ -272,6 +272,7 @@ MonoBehaviour:
   <BlackLevel>k__BackingField: 0.05
   <WhiteColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
   <WhiteLevel>k__BackingField: 0.95
+  <ContourColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
   <DitherType>k__BackingField: 1
   <DitherStrength>k__BackingField: 0.1
   <Shader>k__BackingField: {fileID: -6465566751694194690, guid: 5d0f93ba092e5a545bab40b50ba2861e, type: 3}

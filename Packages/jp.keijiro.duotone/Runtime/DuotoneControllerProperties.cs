@@ -7,6 +7,9 @@ public sealed partial class DuotoneController
     #region Public properties
 
     [field:SerializeField]
+    public SourceMode SourceMode { get; set; } = SourceMode.Luminance;
+
+    [field:SerializeField]
     public Color LowColor { get; set; } = Color.blue;
 
     [field:SerializeField]
@@ -28,7 +31,7 @@ public sealed partial class DuotoneController
     public float WhiteLevel { get; set; } = 0.95f;
 
     [field:SerializeField]
-    public Color EdgeColor { get; set; } = Color.clear;
+    public Color ContourColor { get; set; } = Color.black;
 
     [field:SerializeField]
     public DitherType DitherType { get; set; } = DitherType.Bayer3x3;

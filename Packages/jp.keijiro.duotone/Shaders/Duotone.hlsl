@@ -25,17 +25,21 @@ void DuotoneMain_float
     float edge1 = smoothstep(0.10, 0.20, g.x);
     float edge2 = smoothstep(0.03, 0.04, g.y);
     float edge = max(edge1, edge2);
+    // Luminance embedded in the R channel
+    float lum = C0.r;
 #else
+    // No edge detection
     float edge = 0;
+    // Luminance from the color sample
+    float lum = Luminance(C0.rgb);
 #endif
 
-    // Dithering matrix
+    // Dithering
     float dither = DuotoneDither(SPos * float2(Width, Height));
-    dither = (dither - 0.5) * DitherStrength;
+    lum += (dither - 0.5) * DitherStrength;
 
     // Color key + dithering
     float3 fill = ColorKey0.rgb;
-    float lum = C0.x + dither;
     fill = lum > ColorKey0.w ? ColorKey1.rgb : fill;
     fill = lum > ColorKey1.w ? ColorKey2.rgb : fill;
     fill = lum > ColorKey2.w ? ColorKey3.rgb : fill;
