@@ -380,7 +380,7 @@ Transform:
   m_GameObject: {fileID: 1660098973}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6.5}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -440,7 +440,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -494,16 +494,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SourceMode>k__BackingField: 1
-  <LowColor>k__BackingField: {r: 0, g: 0, b: 1, a: 1}
-  <HighColor>k__BackingField: {r: 1, g: 0, b: 0, a: 1}
+  <LowColor>k__BackingField: {r: 0.2783019, g: 0, b: 0.19124655, a: 1}
+  <HighColor>k__BackingField: {r: 0.8745098, g: 0.20875613, b: 0, a: 1}
   <SplitLevel>k__BackingField: 0.5
   <BlackColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
-  <BlackLevel>k__BackingField: 0.05
+  <BlackLevel>k__BackingField: 0.1
   <WhiteColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
-  <WhiteLevel>k__BackingField: 0.95
+  <WhiteLevel>k__BackingField: 0.9
   <ContourColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
   <DitherType>k__BackingField: 1
-  <DitherStrength>k__BackingField: 0.25
+  <DitherStrength>k__BackingField: 0.2
   <Shader>k__BackingField: {fileID: -6465566751694194690, guid: 5d0f93ba092e5a545bab40b50ba2861e, type: 3}
 --- !u!1 &1838021247
 GameObject:
