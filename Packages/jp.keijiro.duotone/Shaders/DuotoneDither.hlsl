@@ -1,6 +1,6 @@
 #if defined(_DITHERTYPE_BAYER2X2)
 
-static float DuotoneBayerArray[] =
+float DuotoneBayerArray[] =
 {
     0.000000, 0.664062,
     0.996094, 0.332031,
@@ -13,7 +13,7 @@ static float DuotoneDither(uint2 psp)
 
 #elif defined(_DITHERTYPE_BAYER3X3)
 
-static float DuotoneBayerArray[] =
+float DuotoneBayerArray[] =
 {
     0.000000, 0.871094, 0.371094,
     0.746094, 0.621094, 0.246094,
@@ -27,7 +27,7 @@ static float DuotoneDither(uint2 psp)
 
 #elif defined(_DITHERTYPE_BAYER4X4)
 
-static float DuotoneBayerArray[] =
+float DuotoneBayerArray[] =
 {
     0.000000, 0.531250, 0.132812, 0.664062,
     0.796875, 0.265625, 0.929688, 0.398438,
@@ -42,7 +42,7 @@ static float DuotoneDither(uint2 psp)
 
 #else
 
-static float DuotoneBayerArray[] =
+float DuotoneBayerArray[] =
 {
     0.000000, 0.757812, 0.187500, 0.945312, 0.046875, 0.804688, 0.234375, 0.996094,
     0.503906, 0.250000, 0.695312, 0.441406, 0.550781, 0.296875, 0.742188, 0.488281,
