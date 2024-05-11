@@ -137,11 +137,11 @@
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.vfxgraphassets": {
-      "version": "1.2.0",
+      "version": "2.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.visualeffectgraph": "12.1.8",
+        "com.unity.visualeffectgraph": "14.0.0",
         "jp.keijiro.shadergraphassets": "2.5.2"
       },
       "url": "https://registry.npmjs.com"
