@@ -7,7 +7,7 @@
   "license": "Unlicense",
   "name": "jp.keijiro.duotone",
   "repository": "github:keijiro/Duotone",
-  "unity": "2022.3",
+  "unity": "6000.0",
   "unityRelease": "0f1",
-  "version": "2.1.2"
+  "version": "2.2.0"
 }
