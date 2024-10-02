@@ -1,21 +1,45 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.RenderGraphModule;
+using UnityEngine.Rendering.RenderGraphModule.Util;
 using UnityEngine.Rendering.Universal;
 
 namespace Duotone {
 
 sealed class DuotonePass : ScriptableRenderPass
 {
-    public override void Execute
-      (ScriptableRenderContext context, ref RenderingData data)
-    {
-        var target = data.cameraData.camera.GetComponent<DuotoneController>();
-        if (target == null || !target.enabled) return;
+    class PassData { public DuotoneController Controller { get; set; } }
 
-        var cmd = CommandBufferPool.Get("Duotone");
-        Blit(cmd, ref data, target.Material);
-        context.ExecuteCommandBuffer(cmd);
-        CommandBufferPool.Release(cmd);
+    public DuotonePass()
+      => renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
+
+    public override void RecordRenderGraph(RenderGraph graph,
+                                           ContextContainer context)
+    {
+        // DuotoneController component reference
+        var camera = context.Get<UniversalCameraData>().camera;
+        var ctrl = camera.GetComponent<DuotoneController>();
+        if (ctrl == null || !ctrl.enabled) return;
+
+        // Not supported: Back buffer source
+        var resource = context.Get<UniversalResourceData>();
+        if (resource.isActiveTargetBackBuffer) return;
+
+        // Destination texture allocation
+        var source = resource.activeColorTexture;
+        var desc = graph.GetTextureDesc(source);
+        desc.name = "Duotone";
+        desc.clearBuffer = false;
+        desc.depthBufferBits = 0;
+        var dest = graph.CreateTexture(desc);
+
+        // Blit
+        var param = new RenderGraphUtils.
+          BlitMaterialParameters(source, dest, ctrl.Material, 0);
+        graph.AddBlitPass(param, passName: "Duotone");
+
+        // Destination texture as the camera texture
+        resource.cameraColor = dest;
     }
 }
 
@@ -27,8 +51,8 @@ public sealed class DuotoneFeature : ScriptableRendererFeature
       => _pass = new DuotonePass
            { renderPassEvent = RenderPassEvent.AfterRendering };
 
-    public override void AddRenderPasses
-      (ScriptableRenderer renderer, ref RenderingData data)
+    public override void AddRenderPasses(ScriptableRenderer renderer,
+                                         ref RenderingData data)
       => renderer.EnqueuePass(_pass);
 }
 
