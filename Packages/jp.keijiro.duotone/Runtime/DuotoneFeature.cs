@@ -10,9 +10,6 @@ sealed class DuotonePass : ScriptableRenderPass
 {
     class PassData { public DuotoneController Controller { get; set; } }
 
-    public DuotonePass()
-      => renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
-
     public override void RecordRenderGraph(RenderGraph graph,
                                            ContextContainer context)
     {
@@ -49,7 +46,7 @@ public sealed class DuotoneFeature : ScriptableRendererFeature
 
     public override void Create()
       => _pass = new DuotonePass
-           { renderPassEvent = RenderPassEvent.AfterRendering };
+           { renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing };
 
     public override void AddRenderPasses(ScriptableRenderer renderer,
                                          ref RenderingData data)
