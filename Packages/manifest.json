@@ -9,11 +9,11 @@
     }
   ],
   "dependencies": {
-    "com.unity.render-pipelines.universal": "17.0.3",
-    "com.unity.visualeffectgraph": "17.0.3",
+    "com.unity.render-pipelines.universal": "17.0.4",
+    "com.unity.visualeffectgraph": "17.0.4",
     "jp.keijiro.danish-statues": "1.0.0",
     "jp.keijiro.klak.motion": "1.1.0",
-    "jp.keijiro.metatex": "1.0.4",
-    "jp.keijiro.vfxgraphassets": "2.0.0"
+    "jp.keijiro.metatex": "1.0.5",
+    "jp.keijiro.vfxgraphassets": "3.10.0"
   }
 }
