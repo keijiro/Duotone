@@ -4,7 +4,7 @@ void DuotoneSamplePoints_float
   (float2 UV, float Width, float Height,
    out float2 UV1, out float2 UV2, out float2 UV3)
 {
-    float stride = rcp(float2(Width, Height));
+    float2 stride = rcp(float2(Width, Height));
     UV1 = min(UV + stride, 1 - stride);
     UV2 = float2(UV.x, UV1.y);
     UV3 = float2(UV1.x, UV.y);
