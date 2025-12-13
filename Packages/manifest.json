@@ -11,7 +11,8 @@
   "dependencies": {
     "com.unity.render-pipelines.universal": "17.0.4",
     "com.unity.visualeffectgraph": "17.0.4",
-    "jp.keijiro.danish-statues": "1.0.0",
+    "jp.keijiro.danish-statues": "1.0.1",
+    "jp.keijiro.klak.lineargradient": "1.0.3",
     "jp.keijiro.klak.motion": "1.1.1",
     "jp.keijiro.metatex": "1.0.6",
     "jp.keijiro.vfxgraphassets": "3.10.1"
