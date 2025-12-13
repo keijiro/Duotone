@@ -1,13 +1,14 @@
 {
-  "author": "Keijiro Takahashi",
-  "dependencies": {},
-  "description": "Duotone image filter for URP",
-  "displayName": "Duotone",
-  "keywords": [ "unity" ],
-  "license": "Unlicense",
   "name": "jp.keijiro.duotone",
-  "repository": "github:keijiro/Duotone",
+  "version": "2.2.1",
+  "displayName": "Duotone",
+  "description": "Duotone image filter for URP",
   "unity": "6000.0",
-  "unityRelease": "0f1",
-  "version": "2.2.1"
+  "author": "Keijiro Takahashi",
+  "dependencies": { },
+  "changelogUrl": "https://github.com/keijiro/Duotone/blob/main/CHANGELOG.md",
+  "documentationUrl": "https://github.com/keijiro/Duotone",
+  "licensesUrl": "https://github.com/keijiro/Duotone/blob/main/LICENSE",
+  "license": "Unlicense",
+  "_upm": { "changelog": "" }
 }
