@@ -30,8 +30,9 @@ public sealed partial class DuotoneController : MonoBehaviour
     {
         if (_material == null)
         {
-            _token = new ShaderToken(Shader);
-            _material = CoreUtils.CreateEngineMaterial(Shader);
+            var shader = GetShader();
+            _token = new ShaderToken(shader);
+            _material = CoreUtils.CreateEngineMaterial(shader);
         }
 
         // Color keys

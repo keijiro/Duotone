@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - <Shader>k__BackingField: {fileID: -6465566751694194690, guid: 5d0f93ba092e5a545bab40b50ba2861e, type: 3}
+  - <Shader>k__BackingField: {fileID: 4800000, guid: 5d0f93ba092e5a545bab40b50ba2861e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
