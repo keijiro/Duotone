@@ -21,6 +21,7 @@ sealed class DuotoneControllerEditor : UnityEditor.Editor
     AutoProperty ContourColor;
     AutoProperty DitherType;
     AutoProperty DitherStrength;
+    AutoProperty Opacity;
 
     Label LabelBasic = "Luminance mode only supports color remapping.";
     
@@ -67,6 +68,7 @@ sealed class DuotoneControllerEditor : UnityEditor.Editor
 
         EditorGUILayout.PropertyField(DitherType);
         EditorGUILayout.PropertyField(DitherStrength);
+        EditorGUILayout.PropertyField(Opacity);
 
         serializedObject.ApplyModifiedProperties();
     }

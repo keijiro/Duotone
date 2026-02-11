@@ -13,6 +13,7 @@ public sealed partial class DuotoneController
         public int ColorKey3;
         public int ContourColor;
         public int DitherStrength;
+        public int Opacity;
 
         public LocalKeyword Bayer2x2;
         public LocalKeyword Bayer3x3;
@@ -28,6 +29,7 @@ public sealed partial class DuotoneController
             ColorKey3 = Shader.PropertyToID("_ColorKey3");
             ContourColor = Shader.PropertyToID("_ContourColor");
             DitherStrength = Shader.PropertyToID("_DitherStrength");
+            Opacity = Shader.PropertyToID("_Opacity");
 
             Bayer2x2 = new LocalKeyword(shader, "_DUOTONE_BAYER2X2");
             Bayer3x3 = new LocalKeyword(shader, "_DUOTONE_BAYER3X3");

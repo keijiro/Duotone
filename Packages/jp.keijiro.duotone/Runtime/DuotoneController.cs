@@ -47,6 +47,7 @@ public sealed partial class DuotoneController : MonoBehaviour
         _material.SetKeyword(_bindings.Bayer4x4, DitherType == DitherType.Bayer4x4);
         _material.SetKeyword(_bindings.Bayer8x8, DitherType == DitherType.Bayer8x8);
         _material.SetFloat(_bindings.DitherStrength, DitherStrength);
+        _material.SetFloat(_bindings.Opacity, Opacity);
 
         // Extended mode (Duotone Surface source mode)
         _material.SetKeyword(_bindings.Extended, SourceMode == SourceMode.DuotoneSurface);

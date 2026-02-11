@@ -21,6 +21,7 @@ float4 _ColorKey2;
 float4 _ColorKey3;
 float4 _ContourColor;
 float _DitherStrength;
+float _Opacity;
 
 float4 Frag(Varyings input) : SV_Target
 {
@@ -35,7 +36,7 @@ float4 Frag(Varyings input) : SV_Target
     float2 uv2 = float2(uv.x, uv1.y);
     float2 uv3 = float2(uv1.x, uv.y);
 
-    float3 c0 = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv).rgb;
+    float4 c0 = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv);
     float3 c1 = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv1).rgb;
     float3 c2 = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv2).rgb;
     float3 c3 = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv3).rgb;
@@ -62,7 +63,7 @@ float4 Frag(Varyings input) : SV_Target
     fill = lum > _ColorKey2.w ? _ColorKey3.rgb : fill;
 
     float3 output = lerp(fill, _ContourColor.rgb, edge * _ContourColor.a);
-    return float4(output, 1);
+    return float4(lerp(c0, output, _Opacity), c0.a);
 }
 
 ENDHLSL
