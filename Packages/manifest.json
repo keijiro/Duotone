@@ -9,12 +9,15 @@
     }
   ],
   "dependencies": {
-    "com.unity.render-pipelines.universal": "17.0.4",
-    "com.unity.visualeffectgraph": "17.0.4",
+    "com.unity.visualeffectgraph": "17.3.0",
     "jp.keijiro.danish-statues": "1.0.1",
     "jp.keijiro.klak.lineargradient": "1.0.3",
     "jp.keijiro.klak.motion": "1.1.1",
     "jp.keijiro.metatex": "1.0.6",
-    "jp.keijiro.vfxgraphassets": "3.10.1"
+    "jp.keijiro.noiseshader": "3.0.1",
+    "jp.keijiro.shadergraphassets": "2.5.3",
+    "jp.keijiro.vfxgraphassets": "3.10.1",
+    "com.unity.modules.adaptiveperformance": "1.0.0",
+    "com.unity.modules.vectorgraphics": "1.0.0"
   }
 }

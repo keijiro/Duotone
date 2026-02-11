@@ -5,7 +5,7 @@
   "description": "Duotone image filter for URP",
   "unity": "6000.0",
   "author": "Keijiro Takahashi",
-  "dependencies": { },
+  "dependencies": { "com.unity.render-pipelines.universal": "17.0.0" },
   "changelogUrl": "https://github.com/keijiro/Duotone/blob/main/CHANGELOG.md",
   "documentationUrl": "https://github.com/keijiro/Duotone",
   "licensesUrl": "https://github.com/keijiro/Duotone/blob/main/LICENSE",
