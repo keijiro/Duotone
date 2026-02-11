@@ -5,7 +5,7 @@ namespace Duotone {
 
 public sealed partial class DuotoneController
 {
-    struct ShaderToken
+    struct ShaderBindings
     {
         public int ColorKey0;
         public int ColorKey1;
@@ -20,7 +20,7 @@ public sealed partial class DuotoneController
         public LocalKeyword Bayer8x8;
         public LocalKeyword Extended;
 
-        public ShaderToken(Shader shader)
+        public ShaderBindings(Shader shader)
         {
             ColorKey0 = Shader.PropertyToID("_ColorKey0");
             ColorKey1 = Shader.PropertyToID("_ColorKey1");
