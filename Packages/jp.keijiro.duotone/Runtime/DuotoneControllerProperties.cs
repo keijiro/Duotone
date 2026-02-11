@@ -39,6 +39,9 @@ public sealed partial class DuotoneController
     [field:SerializeField, Range(0, 1)]
     public float DitherStrength { get; set; } = 0.25f;
 
+    [field:SerializeField, Range(0, 1)]
+    public float Opacity { get; set; } = 1;
+
     [field:SerializeField, HideInInspector]
     public Shader Shader { get; set; }
 

@@ -43,10 +43,10 @@ sealed class DuotonePass : ScriptableRenderPass
 public sealed class DuotoneFeature : ScriptableRendererFeature
 {
     DuotonePass _pass;
+    [SerializeField] RenderPassEvent _passEvent = RenderPassEvent.AfterRenderingPostProcessing;
 
     public override void Create()
-      => _pass = new DuotonePass
-           { renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing };
+      => _pass = new DuotonePass { renderPassEvent = _passEvent };
 
     public override void AddRenderPasses(ScriptableRenderer renderer,
                                          ref RenderingData data)
