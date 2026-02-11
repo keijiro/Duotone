@@ -1,6 +1,6 @@
 {
   "name": "jp.keijiro.duotone",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "displayName": "Duotone",
   "description": "Duotone image filter for URP",
   "unity": "6000.0",
@@ -10,5 +10,5 @@
   "documentationUrl": "https://github.com/keijiro/Duotone",
   "licensesUrl": "https://github.com/keijiro/Duotone/blob/main/LICENSE",
   "license": "Unlicense",
-  "_upm": { "changelog": "<b>Added</b><br>- Added signing for Unity 6.3." }
+  "_upm": { "changelog": "<b>Added</b><br>- Added Pass Event property to control the render pass injection point.<br>- Added Opacity property for controlling effect intensity.<br><br><b>Changed</b><br>- Replaced the Shader Graph implementation with a non-graph HLSL shader.<br>- Added an explicit dependency on Universal RP 17.0.0." }
 }

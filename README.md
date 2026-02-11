@@ -26,6 +26,12 @@ the Duotone package via Package Manager.
 [Follow those instructions]:
   https://gist.github.com/keijiro/f8c7e8ff29bfe63d86b888901b82644c
 
+## Update note (v2.2.0 to v2.3.0)
+
+Shader files were changed between v2.2.0 and v2.3.0, so scene references from
+Duotone Controller need to be updated. The references are upgraded
+automatically: Open each scene that uses Duotone Controller once, then save it.
+
 ## How to set up
 
 First, you must add the Duotone Feature to the URP Renderer Features list.
