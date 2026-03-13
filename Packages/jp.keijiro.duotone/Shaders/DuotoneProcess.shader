@@ -78,7 +78,7 @@ ENDHLSL
             HLSLPROGRAM
             #pragma vertex Vert
             #pragma fragment Frag
-            #pragma shader_feature_local _DUOTONE_EXTENDED
+            #pragma multi_compile_local _ _DUOTONE_EXTENDED
             #pragma shader_feature_local _DUOTONE_BAYER2X2 _DUOTONE_BAYER3X3 _DUOTONE_BAYER4X4 _DUOTONE_BAYER8X8
             ENDHLSL
         }
