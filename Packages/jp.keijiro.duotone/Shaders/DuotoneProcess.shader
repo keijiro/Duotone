@@ -48,10 +48,10 @@ float4 Frag(Varyings input) : SV_Target
     float edge1 = smoothstep(0.10, 0.20, g.x);
     float edge2 = smoothstep(0.03, 0.04, g.y);
     float edge = max(edge1, edge2);
-    float lum = c0.r;
+    float lum = LinearToSRGB(c0.r);
     #else
     float edge = 0;
-    float lum = Luminance(c0.rgb);
+    float lum = Luminance(LinearToSRGB(c0.rgb));
     #endif
 
     float dither = DuotoneDither(uv * float2(width, height));
