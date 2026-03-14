@@ -626,14 +626,14 @@ MonoBehaviour:
   <SourceMode>k__BackingField: 1
   <LowColor>k__BackingField: {r: 0.2783019, g: 0, b: 0.19124655, a: 1}
   <HighColor>k__BackingField: {r: 0.8745098, g: 0.20875613, b: 0, a: 1}
-  <SplitLevel>k__BackingField: 0.5
+  <SplitLevel>k__BackingField: 0.75
   <BlackColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
-  <BlackLevel>k__BackingField: 0.1
+  <BlackLevel>k__BackingField: 0.38
   <WhiteColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
-  <WhiteLevel>k__BackingField: 0.9
+  <WhiteLevel>k__BackingField: 0.96
   <ContourColor>k__BackingField: {r: 0, g: 0, b: 0, a: 1}
   <DitherType>k__BackingField: 1
-  <DitherStrength>k__BackingField: 0.2
+  <DitherStrength>k__BackingField: 0.15
   <Opacity>k__BackingField: 1
   <Shader>k__BackingField: {fileID: 4800000, guid: 5d0f93ba092e5a545bab40b50ba2861e, type: 3}
 --- !u!1 &1838021247
