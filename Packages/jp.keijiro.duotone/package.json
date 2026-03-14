@@ -1,6 +1,6 @@
 {
   "name": "jp.keijiro.duotone",
-  "version": "2.3.1",
+  "version": "3.0.0",
   "displayName": "Duotone",
   "description": "Duotone image filter for URP",
   "unity": "6000.0",
@@ -10,5 +10,5 @@
   "documentationUrl": "https://github.com/keijiro/Duotone",
   "licensesUrl": "https://github.com/keijiro/Duotone/blob/main/LICENSE",
   "license": "Unlicense",
-  "_upm": { "changelog": "<b>Fixed</b><br>- Prevented the DuotoneSurface source mode shader variant from being stripped<br>in player builds." }
+  "_upm": { "changelog": "<b>Changed</b><br>- Changed the luminance comparison in the duotone process shader to use sRGB." }
 }
