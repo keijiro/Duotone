@@ -63,7 +63,7 @@ float4 Frag(Varyings input) : SV_Target
     fill = lum > _ColorKey2.w ? _ColorKey3.rgb : fill;
 
     float3 output = lerp(fill, _ContourColor.rgb, edge * _ContourColor.a);
-    return float4(lerp(c0, output, _Opacity), c0.a);
+    return float4(lerp(c0.rgb, output, _Opacity), c0.a);
 }
 
 ENDHLSL
@@ -79,7 +79,7 @@ ENDHLSL
             #pragma vertex Vert
             #pragma fragment Frag
             #pragma multi_compile_local _ _DUOTONE_EXTENDED
-            #pragma shader_feature_local _DUOTONE_BAYER2X2 _DUOTONE_BAYER3X3 _DUOTONE_BAYER4X4 _DUOTONE_BAYER8X8
+            #pragma multi_compile_local _DUOTONE_BAYER2X2 _DUOTONE_BAYER3X3 _DUOTONE_BAYER4X4 _DUOTONE_BAYER8X8
             ENDHLSL
         }
     }
